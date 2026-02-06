@@ -505,6 +505,23 @@
     .panelLight details summary{ color: rgba(11,18,32,.90); }
     details p{ margin: 10px 0 0; }
 
+	  .staticDetail{
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0,216,187,.18);
+  background: rgba(0,216,187,.06);
+  padding: 14px;
+  margin-top: 14px;
+}
+
+.staticDetailTitle{
+  font-weight: 750;
+  color: rgba(255,255,255,.92);
+  letter-spacing: .02em;
+  margin-bottom: 10px;
+}
+
+	  
+	  
     .riskBox{
       border-radius: var(--radius-xl);
       padding: 22px;
@@ -1122,8 +1139,7 @@
       <div class="introGrid">
 <div class="introCard reveal">
           <blockquote>
-            As we move into February, the topic on everyone’s mind is Phase III.
-          </blockquote>
+          As we continue to push into February, the topic on everyone’s mind is Phase III.</blockquote>
 
   <div class="introByline">
             <div>
@@ -1250,12 +1266,19 @@
             </div>
           </div>
 
-          <details>
-            <summary>Voice Task Implemented</summary>
-            <p> Beyond speech from clinical interviews, everyday speech with emotional content provides a large feature space (linguistics, semantics, phonation, articulation, etc) that has shown to discriminate PTSD. Using a single, simple user response questions with a 60-second voice response we are able to decompose the audio signal into features that were able to differentiate our PTSD groups. </p>
-            <p><strong>We have seen strong results in preliminary analysis, demonstrated in the charts below. </strong></p>
-			  
-          </details>
+<div class="staticDetail">
+  <div class="staticDetailTitle">Preliminary Voice Task Results</div>
+
+  <p>
+    Beyond speech from clinical interviews, everyday speech with emotional content provides a large feature space
+    (linguistics, semantics, phonation, articulation, etc.) that has shown to discriminate PTSD. Using a single,
+    simple user response question with a 60-second voice response, we are able to decompose the audio signal into
+    features that differentiate PTSD groups.
+  </p>
+
+  <p><strong>We have seen strong results in preliminary analysis, demonstrated in the charts below.</strong></p>
+</div>
+
         </div>
 		  
       </div>     
@@ -1319,8 +1342,8 @@
 </div>
 
   </section>
-
-  <section id="validation" class="panelLight sectionPad">
+<br>
+<section id="validation" class="panelLight sectionPad">
     <div class="container">
       <div class="kicker reveal">Validation</div>
       <h2 class="title reveal">Clinical &amp; Regulatory Momentum</h2>
@@ -1349,7 +1372,7 @@
         <div class="card col-6 reveal">
           <h3>Guided Impactful Insights&nbsp;</h3>
           <p class="muted">
-            Their insights guide everything from usability decisions to broader questions about clinical utility, and they play a critical role in keeping our team focused on the bigger picture: why this product matters and who it’s for. Our patient advisors have been able to give us genuine context for our product, their difficult journeys towards a diagnosis, and a deeper understanding of PTSD and themselves has been inspiring. They have shared with us how meaningful the Senseye Diagnostic will be for them and others experience PTSD, who are often searching for some insight into the debilitating symptoms they are living with.
+            Their insights guide everything from usability decisions to broader questions about clinical utility, and they play a critical role in keeping our team focused on the bigger picture: why this product matters and who it’s for. Our patient advisors have been able to give us genuine context for our product, their difficult journeys towards a diagnosis, and a deeper understanding of PTSD and themselves has been inspiring. They have shared with us how meaningful the Senseye Diagnostic will be for them and others who experience PTSD, who are often searching for some insight into the debilitating symptoms they are living with.
           </p>
 
 
@@ -1359,7 +1382,17 @@
       </div>
 		  
     </div>
-		    <div class="container"><br><br>
+	  
+	      <div class="container"><br>
+      <h2 class="title reveal">Australia Rebate</h2>
+      <p class="lede reveal">
+      <strong> Our Advanced Overseas Finding has been granted! </strong>This came in record time —<em> about 2 months instead of the expected ~6 months. </em>What it means: the Australian tax authorities have agreed that all of our eligible clinical trial spend in both Australia and the U.S. can be included in our Australian R&amp;D tax rebate claim. Because we have meaningful clinical spend in the U.S., this expands the rebate base significantly. This was a deliberate long-term move we started ~2 years ago when we set up the Australian entity, and it’s great to see it pay off exactly as intended.</p>
+    </div>
+
+	  
+	  
+	  
+  <div class="container"><br><br>
       <h2 class="title reveal">The Senseye Team</h2>
       <p> Senseye is currently a <strong>team of 19</strong>, operating with focus and urgency as we approach Phase III.</p>
       <p>We’re actively searching for: </p>
@@ -1375,20 +1408,19 @@
     <div class="container">
       <div class="kicker reveal">Goals</div>
       <h2 class="title reveal">Quarterly Goals</h2>
-      <p>
-        Infrastructure upgrades, improved instructions, and stronger UX reduced data loss and user error, improving
-        study efficiency and readiness for higher-volume execution.
-      </p>
 
       <div class="grid">
         <div class="card col-7 reveal">
 <h3>Data Quality &amp; Participant Experience</h3>
           <ol>
-            <li>Advance commercial readiness by establishing a clear, credible, and executable go-to-market foundation across reimbursement strategy and market access.&nbsp;
-              <ol>
-                <li>Complete Q1 tasks on GTM roadmap&nbsp;</li>
-              </ol>
-            </li>
+            	            <li> Productizable MLOps Foundations by End of Q1</li>
+					        <ul>
+
+								        <li>Model + data versioning implemented (data snapshot strategy, model tagging, reproducible runs) by Mar 31, 2026</li>
+	        <li>Automated pipeline QA (data validation checks + golden test cases) in place by Mar 31, 2026</li>
+								        <li>Monitoring + ownership established (dashboards + runbooks + escalation path) by Mar 31, 2026</li>
+      </ul>
+
             <li>Contrast-banded pupillometry performance framework (low-contrast eyes)&nbsp;
               <ol>
                 <li>Contrast metric implemented: a reproducible contrast score in the range [0, 1] computed from sampled frames, where 0 = no usable contrast between pupil/iris and 1 = ideal contrast, available for analysis and reporting by end of Q1 2026.
@@ -1418,6 +1450,12 @@ Initial per-band performance targets set (adjustable): starting targets establis
 
         <div class="card col-5 reveal">
           <h3>Security &amp; Multi-Tenant Platform</h3>
+						  <li>Advance commercial readiness by establishing a clear, credible, and executable go-to-market foundation across reimbursement strategy and market access.&nbsp;
+              <ol>
+                <li>Complete Q1 tasks on GTM roadmap&nbsp;</li>
+              </ol>
+            </li>
+			
           <ul>
             <li>Define and complete foundational productization preparation</li>
               <ol>
@@ -1426,23 +1464,12 @@ Initial per-band performance targets set (adjustable): starting targets establis
 		        <ul>
 		          <li>Recruitment targets hit</li>
 	            </ul>
-	            <li> Productizable MLOps Foundations by End of Q1</li>
-					        <ul>
 
-								        <li>Model + data versioning implemented (data snapshot strategy, model tagging, reproducible runs) by Mar 31, 2026</li>
-	        <li>Automated pipeline QA (data validation checks + golden test cases) in place by Mar 31, 2026</li>
-								        <li>Monitoring + ownership established (dashboards + runbooks + escalation path) by Mar 31, 2026</li>
-      </ul>
       </ul>
 			  
       </div>
     </div>
 		    <section id="rebate" class="sectionPad">
-    <div class="container">
-      <h2 class="title reveal">Australia Rebate</h2>
-      <p class="lede reveal">
-      <strong> Our Advanced Overseas Finding has been granted! </strong>This came in record time —<em> about 2 months instead of the expected ~6 months. </em>What it means: the Australian tax authorities have agreed that all of our eligible clinical trial spend in both Australia and the U.S. can be included in our Australian R&amp;D tax rebate claim. Because we have meaningful clinical spend in the U.S., this expands the rebate base significantly. This was a deliberate long-term move we started ~2 years ago when we set up the Australian entity, and it’s great to see it pay off exactly as intended.</p>
-    </div>
 
   </section>
   </section>
@@ -1462,7 +1489,7 @@ Initial per-band performance targets set (adjustable): starting targets establis
         </div>
 
         <div class="card col-6 reveal">
-		<h3>Leadership &amp; Extra Curricular Activities</h3>
+		<h3>Leadership &amp; Extacurricular Activities</h3>
           <p class="muted"></p>
           <p> As we enter Phase III, David’s leadership continues to be a steady force across the organization. From navigating strategy to supporting teams through rapid iteration, David has helped shape an environment where high standards and trust coexist, a combination that’s essential as we take on the complexity of a trial at this scale.&nbsp;</p>
           <p>You might not be aware that David is also a licensed commercial pilot and flight instructor, and flies for the Civil Air Patrol, he’s flown essential supplies into disaster zones as well as search and rescue.&nbsp;</p>
