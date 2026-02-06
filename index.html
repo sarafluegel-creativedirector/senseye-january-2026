@@ -403,11 +403,18 @@
     .col-6{ grid-column: span 6; }
     .col-12{ grid-column: span 12; }
 
-    @media (max-width: 900px){
-      .col-7, .col-5, .col-6{ grid-column: span 12; }
-      .heroTitle{ white-space: normal; }
-      .datePill{ display:none; }
-      section{ scroll-margin-top: 20px; } /* UPDATED */
+@media (max-width: 900px){
+  .col-7, .col-5, .col-6{ grid-column: span 12; }
+  .heroTitle{ white-space: normal; }
+  /* KEEP the date pill visible */
+  .datePill{
+    display: inline-flex;
+    margin-left: auto;     /* pushes it to the right when there’s room */
+    max-width: 100%;
+  }
+  section{ scroll-margin-top: 20px; }
+}
+ /* UPDATED */
     }
     @media (max-width: 520px){
       .heroInner{ padding: 18px 14px 14px; }
@@ -1053,7 +1060,9 @@
     .card .imgFrame{
       margin-top: 14px;
     }	  
-	  
+	  	   .navToggle {
+  display: none !important;
+}
   </style>
 </head>
 
@@ -1079,15 +1088,28 @@
 
       <div class="navBar" role="navigation" aria-label="Primary">
         <div class="navInner">
-          <nav class="navLinks" id="navLinks">
-            <a href="#monthataglance" class="navlink">Month-at-a-Glance</a>
-            <a href="#updates" class="navlink">Updates</a>
-            <a href="#data" class="navlink">Data &amp; Architecture</a>
-            <a href="#validation" class="navlink">Validation</a>
-            <a href="#goals" class="navlink">Goals</a>
-			<a href="#employee" class="navlink">Employee Highlight</a>
-            <a href="#wrapup" class="navlink">Wrap-Up</a>
-          </nav>
+<nav class="topNav" aria-label="Primary">
+  <button class="navToggle" type="button"
+          aria-expanded="false"
+          aria-controls="primaryNav">
+    <span class="navToggleIcon" aria-hidden="true"></span>
+    <span class="srOnly">Menu</span>
+  </button>
+
+  <div id="primaryNav" class="navLinks" 
+
+>
+    <!-- your existing linked nav items go here -->
+    <a href="#month" class="navLink">MONTH-AT-A-GLANCE</a>
+    <a href="#updates" class="navLink">UPDATES</a>
+    <a href="#data" class="navLink isActive">DATA &amp; ARCHITECTURE</a>
+    <a href="#validation" class="navLink">VALIDATION</a>
+    <a href="#goals" class="navLink">GOALS</a>
+    <a href="#employee" class="navLink">EMPLOYEE HIGHLIGHT</a>
+    <a href="#wrap" class="navLink">WRAP-UP</a>
+  </div>
+</nav>
+
         </div>
       </div>
 
