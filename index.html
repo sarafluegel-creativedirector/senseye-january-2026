@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Senseye VIEW | 2025 Executive Wrap-Up</title>
+  <title>Senseye VIEW | 2026 Month One Wrap-up</title>
 
   <style>
     :root{
@@ -296,6 +296,15 @@
       line-height: 1.15;
       letter-spacing: .01em;
     }
+	  
+    .ledes{
+      margin: 14px 0 0;
+      max-width: 820px;
+      font-size: 16px;
+      color: rgba(255,255,255,.78);
+    }
+    .panelLight .lede{ color: rgba(11,18,32,.78); }
+	  
 
     .lede{
       margin: 14px 0 0;
@@ -394,11 +403,18 @@
     .col-6{ grid-column: span 6; }
     .col-12{ grid-column: span 12; }
 
-    @media (max-width: 900px){
-      .col-7, .col-5, .col-6{ grid-column: span 12; }
-      .heroTitle{ white-space: normal; }
-      .datePill{ display:none; }
-      section{ scroll-margin-top: 20px; } /* UPDATED */
+@media (max-width: 900px){
+  .col-7, .col-5, .col-6{ grid-column: span 12; }
+  .heroTitle{ white-space: normal; }
+  /* KEEP the date pill visible */
+  .datePill{
+    display: inline-flex;
+    margin-left: auto;     /* pushes it to the right when there’s room */
+    max-width: 100%;
+  }
+  section{ scroll-margin-top: 20px; }
+}
+ /* UPDATED */
     }
     @media (max-width: 520px){
       .heroInner{ padding: 18px 14px 14px; }
@@ -489,6 +505,23 @@
     .panelLight details summary{ color: rgba(11,18,32,.90); }
     details p{ margin: 10px 0 0; }
 
+	  .staticDetail{
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0,216,187,.18);
+  background: rgba(0,216,187,.06);
+  padding: 14px;
+  margin-top: 14px;
+}
+
+.staticDetailTitle{
+  font-weight: 750;
+  color: rgba(255,255,255,.92);
+  letter-spacing: .02em;
+  margin-bottom: 10px;
+}
+
+	  
+	  
     .riskBox{
       border-radius: var(--radius-xl);
       padding: 22px;
@@ -817,6 +850,14 @@
       --progress: 0; /* 0..1 set via JS */
     }
 
+	  .subIndent{
+  padding-left: 14px;
+  border-left: 2px solid rgba(0,216,187,.25);
+}
+
+	  
+	  
+	  
     .stepper:before{
       content:"";
       position:absolute;
@@ -1038,6 +1079,147 @@
       0%, 100% { box-shadow: 0 12px 26px rgba(0,0,0,.22), 0 0 0 3px rgba(0,216,187,.12), inset 0 0 0 1px rgba(255,255,255,.10); }
       50%      { box-shadow: 0 16px 34px rgba(0,0,0,.26), 0 0 0 4px rgba(0,216,187,.16), inset 0 0 0 1px rgba(255,255,255,.10); }
     }
+	  
+    .col-4{ grid-column: span 4; }
+
+    .card .imgFrame{
+      margin-top: 14px;
+    }	  
+	  	   .navToggle {
+  display: none !important;
+}
+	  
+	  .subIndent{
+  margin-left: 14px;
+  padding-left: 14px;
+  border-left: 2px solid rgba(0,216,187,.25);
+}
+
+.subIndent--bullets li{
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 6px;
+}
+
+/* ONLY lists with this class are affected */
+.subIndent--bullets{
+  list-style: none;
+  margin: 8px 0 0 14px;
+  padding: 0;
+}
+
+/* extra safety for modern browsers */
+.subIndent--bullets li::marker{
+  content: "";
+}
+
+/* list item layout */
+.subIndent--bullets li{
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 6px;
+}
+
+/* custom arrow bullet */
+.subIndent--bullets li::before{
+  content: "\25B6";
+  position: absolute;
+  left: 15px;
+  top: 0.15em;
+  font-size: 14px;
+  opacity: .9;
+  color: rgba(0,216,187,.9);
+}
+
+	  .title {
+  font-size: clamp(26px, 2.5vw, 38px);
+  letter-spacing: .01em;
+}
+
+	  .card > h2,
+.card h2.title {
+  color: rgba(228,243,255,0.97);
+	  letter-spacing: .05em;
+      line-height: 1.09;
+
+}
+
+.subSectionTitle{
+  margin: 18px 0 6px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(0,216,187,.95);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* optional accent line */
+.subSectionTitle:before{
+  content:"";
+  width: 18px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--teal-500), var(--blue-600));
+  border-radius: 2px;
+}
+
+	  .subSectionTitle{
+  color: rgba(11,18,32,.70);
+}
+.panelDark .subSectionTitle{
+  color: rgba(234,240,255,.75);
+}
+
+	  .card h2.title{
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.card h2.title::after{
+  content:"";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 64px;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--teal-500),
+    var(--blue-600)
+  );
+}
+
+
+		  /* Technical Goal label (KEY RESULT style, but larger + reversed line) */
+.goalsDisplay{
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 18px;          /* larger than KEY RESULT */
+  font-weight: 800;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+
+  color: rgba(0,231,196,1.00);
+  margin: 10px 0 10px;
+}
+
+.goalsDisplay::before{
+  content:"";
+  width: 26px;
+  height: 3px;
+  border-radius: 3px;
+
+  /* reversed gradient */
+  background: linear-gradient(90deg, var(--blue-600), var(--teal-500));
+  box-shadow: 0 8px 18px rgba(0,216,187,0.25);
+}
+
+
   </style>
 </head>
 
@@ -1051,26 +1233,40 @@
       <div class="heroInner reveal">
         <div class="heroRow">
           <div class="brandLeft"> 
-            <img src="../Senseye-WhiteLogo.png" width="350" height="82" style="margin-bottom:3px; margin-right: 10px" alt=""/>
+            <img src="../month-one/Senseye-WhiteLogo.png" width="350" height="82" alt=""/>
             <div class="heroTitleBlock">
               <h1 class="heroTitle">VIEW</h1>
               <div class="heroSubtitle">Validation, Insight, &amp; Executive Wrap-up</div>
-            </div>
+            </div>          <div class="datePill" aria-label="Report date">2026 Month One Wrap-up</div>
+
           </div>
-          <div class="datePill" aria-label="Report date">2025 Executive Wrap-Up</div>
         </div>
       </div>
 
       <div class="navBar" role="navigation" aria-label="Primary">
         <div class="navInner">
-          <nav class="navLinks" id="navLinks">
-            <a href="#senseye" class="navlink">Senseye</a>
-            <a href="#validation" class="navlink">Validation</a>
-            <a href="#updates" class="navlink">Updates</a>
-            <a href="#employee" class="navlink">Employee</a>
-            <a href="#clinical" class="navlink">Clinical</a>
-            <a href="#opportunity" class="navlink">Opportunity</a>
-          </nav>
+<nav class="topNav" aria-label="Primary">
+  <button class="navToggle" type="button"
+          aria-expanded="false"
+          aria-controls="primaryNav">
+    <span class="navToggleIcon" aria-hidden="true"></span>
+    <span class="srOnly">Menu</span>
+  </button>
+
+  <div id="primaryNav" class="navLinks" 
+
+>
+    <!-- your existing linked nav items go here -->
+    <a href="#month" class="navLink">MONTH-AT-A-GLANCE</a>
+    <a href="#updates" class="navLink">UPDATES</a>
+    <a href="#data" class="navLink isActive">DATA &amp; ARCHITECTURE</a>
+    <a href="#validation" class="navLink">VALIDATION</a>
+    <a href="#goals" class="navLink">GOALS</a>
+    <a href="#employee" class="navLink">EMPLOYEE HIGHLIGHT</a>
+    <a href="#wrapup" class="navLink">WRAP-UP</a>
+  </div>
+</nav>
+
         </div>
       </div>
 
@@ -1083,8 +1279,7 @@
       <div class="introGrid">
 <div class="introCard reveal">
           <blockquote>
-            As we move into February, the topic on everyone’s mind is Phase III.
-          </blockquote>
+          As we continue to push into February, the topic on everyone’s mind is Phase III.</blockquote>
 
   <div class="introByline">
             <div>
@@ -1110,54 +1305,70 @@
           <h3>This month at a glance</h3>
           
           <div class="metric">
-            <div class="icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
             <div class="metricInfo"><strong>Australia Advanced Overseas Finding Granted</strong><span>Covers eligible clinical trial spend in AU + U.S. for the AU rebate claim; expected to meaningfully expand rebate dollars.
             </span></div>
           </div>
 
           <div class="metric">
-            <div class="icon"><svg viewBox="0 0 24 24"><path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"/></svg></div>
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M11 11.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5zm1.5-4.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5zm0 10c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm5-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5zm-10 0c0-.83-.67-1.5-1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5z"/></svg></div>
             <div class="metricInfo"><strong>Phase III Clinical Trial</strong><span>Begins February 23
 </span></div>
           </div>
 
           <div class="metric">
-            <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div>
+            <div class="icon"><svg viewBox="0 0 24 24" fill="currentColor">
+  <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm-2 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3-7V3.5L18.5 9H15z" />
+</svg></div>
             <div class="metricInfo"><strong>Final Protocol</strong><span>And Platform Updates Underway</span></div>
           </div>
 
           <div class="metric">
-            <div class="icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 2c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zM7 18c0-1.6 2.2-2.5 5-2.5s5 .9 5 2.5v1H7v-1z"/></svg></div>
+            <div class="icon"><svg viewBox="0 0 24 24" fill="currentColor">
+  <path d="M11.5 2L2 6.5v11L11.5 22 21 17.5v-11L11.5 2zM12 4.11l7 3.32v3.01l-7 3.32-7-3.32V7.43l7-3.32zM4 16.32V12l7 3.32v4.31l-7-3.31zm15 0l-7 3.31v-4.31l7-3.32v4.32z" />
+</svg></div>
             <div class="metricInfo"><strong>Platform Stability</strong><span>Validated at 10,000+ participant runs</span></div>
           </div>
           <div class="metric">
-            <div class="icon"><svg viewBox="0 0 24 24"><path d="M19 19H5V8h14v11zM16 1h-8v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-3V1z"/></svg></div>
+            <div class="icon"><svg viewBox="0 0 24 24" fill="currentColor">
+  <rect x="2" y="11" width="20" height="2" rx="1" />
+  <circle cx="6" cy="12" r="3" />
+  <circle cx="18" cy="12" r="3" />
+  <rect x="5" y="5" width="2" height="4" rx="1" />
+  <rect x="17" y="15" width="2" height="4" rx="1" />
+  <circle cx="12" cy="12" r="1.5" />
+</svg></div>
             <div class="metricInfo"><strong>Ongoing Platform, ML, and Data Pipeline</strong><span>Improvements in Support of Scaled Clinical Execution</span></div>
           </div>
           <div class="metric">
-            <div class="icon"><svg viewBox="0 0 24 24"><path d="M19 19H5V8h14v11zM16 1h-8v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-3V1z"/></svg></div>
-            <div class="metricInfo"><strong>Australia Study Startup Workstream Accelerating</strong><span>Submission Package Complete; Dates to Be Confirmed</span></div>
+            <div class="icon"><svg viewBox="0 0 24 24" fill="currentColor">
+  <path d="M13 5l8.5 7-8.5 7V5zm-9 0l8.5 7L4 19V5z" />
+</svg></div>
+            <div class="metricInfo"><strong>Australia Study Startup Workstream Accelerating</strong><span>Submission Package Complete; Dates To Be Confirmed</span></div>
           </div>
 
           <div class="metric">
 			  
-            <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10z"/></svg></div>
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg></div>
             <div class="metricInfo"><strong>Rear-Camera PLR</strong><span>Enabled</span></div>
           </div>
           <div class="metric">
              <div class="metric">
-            <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10z"/></svg></div>
+            <div class="icon"><svg viewBox="0 0 24 24" fill="currentColor">
+  <rect x="4" y="9" width="2" height="6" rx="1" />
+  <rect x="8" y="6" width="2" height="12" rx="1" />
+  <rect x="12" y="3" width="2" height="18" rx="1" />
+  <rect x="16" y="6" width="2" height="12" rx="1" />
+  <rect x="20" y="9" width="2" height="6" rx="1" />
+</svg></div>
             <div class="metricInfo"><strong>Voice Task Introduced </strong><span>With Excellent Initial Results</span></div>
-				 
-				 
-				 </aside>
       </div>
     </div>
   </section>
 
-  <section id="senseye" class="panelDark sectionPad">
+<section id="updates" class="panelDark sectionPad">
     <div class="container">
-      <div class="kicker reveal">Senseye</div>
+      <div class="kicker reveal">Senseye Updates</div>
       <h2 class="title reveal">Product &amp; Platform Progress</h2>
       <p class="lede reveal">
         January brought a meaningful leap forward in how we collect ocular data, one that directly strengthens our readiness for Phase III. We’ve implemented a key update to the ocular task that asks participants to rotate their phone during the assessment, allowing us to use the rear camera to collect data.
@@ -1165,11 +1376,10 @@
 
       <div class="grid">
         <div class="card col-7 reveal">
-          <h3>Executive Overview</h3>
-          <p class="muted">
-            This change has had a huge impact on data quality, allowing us to capture significantly higher-resolution imagery and improved frame rates, resulting in much stronger signal. These improvements have also helped address variability across participants. In particular, we’re now seeing much more reliable data capture for individuals with darker eye color, something that previously required additional downstream adjustments.
-          </p>
-          <h3>The Result</h3>
+          <h3>Improvements Leading to Huge Impacts&nbsp;&nbsp;</h3>
+          <p class="muted"> This change has had a huge impact on data quality, allowing us to capture significantly higher-resolution imagery and improved frame rates, resulting in much stronger signal. These improvements have also helped address variability across participants. In particular, we’re now seeing much more reliable data capture for individuals with darker eye color, something that previously required additional downstream adjustments. </p>
+          <p class="muted">&nbsp;</p>
+<h3>Real-time Impact</h3>
           <p class="muted">
             Cleaner data, fewer retries, and a smoother participant experience overall. To support this change, we’ve added real-time verbal guidance within the app. Participants now receive spoken feedback (for example, “a little higher”) to help them position the camera correctly. Early testing has been extremely encouraging, including with non-technical users.
           </p>
@@ -1181,8 +1391,6 @@
             <span class="miniPill">Data Quality Leap</span>
 			<span class="miniPill">Higher resolution</span>
 			<span class="miniPill">Improved Frame Rates</span>
-
-
           </div>
         </div>
 
@@ -1190,7 +1398,7 @@
           <div class="metricTile">
             <div>
               <div class="metricVal">Phase 3</div>
-              <div class="metricLabel">ready</div>
+              <div class="metricLabel">Ready</div>
             </div>
             <div style="text-align:right">
               <div class="metricVal">Signal</div>
@@ -1198,201 +1406,271 @@
             </div>
           </div>
 
-          <details>
-            <summary>Voice Task Implemented</summary>
-            <p>
-              Beyond speech from clinical interviews, everyday speech with emotional content provides a large feature space (linguistics, semantics, phonation, articulation, etc) that has shown to discriminate PTSD. Using a single, simple user response questions with a 60-second voice response we are able to decompose the audio signal into features that were able to differentiate our PTSD groups.
-            </p>
-          </details>
-        </div>
-		  
-      </div>      <div class="grid">
-        <div class="card col-6 reveal">
-          <h3>ROC Curve</h3>
-          <p class="muted">True Positive Rate versus False Positive Rates&nbsp;&nbsp;</p>
-          <p class="muted">&nbsp;</p>
-<div class="imgFrame">
-	  <img src="Screenshot 2026-02-02 at 9.49.40 PM.png" width="723" height="710" alt=""/>
-          </div>
+<div class="staticDetail">
+  <div class="staticDetailTitle">Preliminary Voice Task Results</div>
 
-          <details data-track="validation-expand">
-            <summary>Roc Curve Graph</summary>
-            <p>
-              True Positive Rate versus False Positive Rates<br>
-            <p class="muted">&nbsp;</p>
-            </p><div class="imgFrame">
-	  <img src="Screenshot 2026-02-02 at 9.49.40 PM.png" width="723" height="710" alt=""/>
-          </div>
-          </details>
-        </div>
+  <p>
+    Beyond speech from clinical interviews, everyday speech with emotional content provides a large feature space
+    (linguistics, semantics, phonation, articulation, etc.) that has shown to discriminate PTSD. Using a single,
+    simple user response question with a 60-second voice response, we are able to decompose the audio signal into
+    features that differentiate PTSD groups.
+  </p>
 
-        <div class="card col-6 reveal">
-          <h3>Confusion Martrix - Actual vs Predicted</h3>
-          <p class="muted">
-            Accuracy improvements, paired with major processing efficiency gains, reduce operational friction and
-            support scalable trial execution—an important bridge between R&amp;D and commercialization.
-          </p>
-
-          <div class="grid" style="margin-top:14px">
-            <div class="card col-6" style="box-shadow:none;">
-              <div class="metricVal">74%</div>
-              <div class="metricLabel">ptsd</div>
-            </div>
-            <div class="card col-6" style="box-shadow:none;">
-              <div class="metricVal">3–5×</div>
-              <div class="metricLabel">Processing efficiency</div>
-				
-            </div><div>
-          <p style="font-size: medium">True Positive Rate versus False Positive Rates&nbsp;&nbsp;</p>
-          <p class="muted">&nbsp;</p>
-<div class="imgFrame">
-	  <img src="Screenshot 2026-02-02 at 9.49.40 PM.png" width="723" height="710" alt=""/>
-          </div></div>
-		  </div>
+  <p><strong>We have seen strong results in preliminary analysis, demonstrated in the charts below.</strong></p>
 </div>
 
-    </div>
-  </section>
+        </div>
+		  
+      </div>     
+		
+		<div class="grid">
+  <!-- Card 1 -->
+  <div class="card col-4 reveal">
+    <h3>Top Features</h3>
+    <p class="muted">
+    Negative Emotion, Speakig Duration, etc.&nbsp; </p>
 
-  <section id="validation" class="panelLight sectionPad">
+    <div class="imgFrame">
+	<img src="../month-one/image-one.png" width="837" height="710" alt=""/>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card col-4 reveal">
+    <h3>ROC Curve</h3>
+    <p class="muted">
+    True Positive Rate / False Positive Rate&nbsp; &nbsp; </p>
+
+    <div class="imgFrame"> <img src="../month-one/image-two.png" width="723" height="710" alt=""/>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card col-4 reveal">
+    <h3>Confusion Matrix</h3>
+    <p class="muted">
+    Actual versus Predicted </p>
+
+    <div class="imgFrame"> <img src="../month-one/image-three.png" width="723" height="710" alt=""/>
+    </div>
+  </div>
+</div>
+
+	    <div class="container"><br>
+<div id="data" class="kicker reveal">Data &amp; Architecture</div>
+<h2 class="title reveal">Machine Learning &amp; Modeling Progress</h2>
+      <p class="lede reveal">
+        Alongside platform improvements, the machine learning team has been making important advances in both data scale and modeling approach.
+      </p>
+	
+		<div class="grid">
+			
+        <div class="card col-6 reveal">
+          <h3>Expanding Our Data Foundation</h3>
+          <p class="muted">We are now training video-based point-of-gaze and pupil radius estimation models using the EVE dataset, a large, high-quality video dataset that includes labels for gaze angle, head angle, point of gaze, and pupil radius. Notably, the pupil labels were collected using infrared Tobii hardware, giving us exceptionally accurate ground-truth pupil measurements — even in low-contrast eyes. The dataset includes approximately 2.6 million high-resolution video frames captured with Basler cameras, effectively doubling the amount of eye data available for training. This expanded data foundation strengthens model robustness and improves generalization across participant variability.</p>
+        </div>
+
+        <div class="card col-6 reveal">
+          <h3>Advancing Our Modeling Architecture</h3>
+          <p class="muted"> Modeling focus is on task fusion, an approach that combines data across tasks and increases the power behind a model. We have begun transitioning from more traditional machine learning approaches, which are fast to iterate and well-suited for early model prototyping, toward deeper learning architectures. These models are more powerful, particularly for task fusion, and represent an important step in moving from MP-oriented workflows toward DCT-intended analysis as we prepare for Phase III and beyond. </p>
+          <p class="muted">We are also exploring an early-stage end-to-end modeling approach, where raw video clips are used directly to generate PTSD predictions. While still in its infancy, this work reflects our longer-term vision for simplifying pipelines while preserving rigor and performance. &nbsp;</p>
+        </div>
+			  
+
+</div>
+	  </div>
+</div>
+
+  </section>
+<br>
+<section id="validation" class="panelLight sectionPad">
     <div class="container">
       <div class="kicker reveal">Validation</div>
-      <h2 class="title reveal">Beyond Guessing: Validation Alpha Established</h2>
+      <h2 class="title reveal">Clinical &amp; Regulatory Momentum</h2>
+      <p class="lede reveal"> <strong> Phase III begins on February 23, and with it, a major transition for Senseye.&nbsp;</strong></p>
+      <p class="lede reveal">This trial represents the start of the study that will ultimately be submitted to the FDA, and it’s the largest clinical trial of its kind. Every decision we’re making right now — from protocol execution to participant experience — is focused on meeting regulatory-grade standards while operating at scale. <br>
+      Operationally, we’re driving toward “day-1 readiness” across the app, pipelines, monitoring, and support plan so we can execute cleanly from the first participant onward. There’s a palpable sense of momentum across the team. <br>
+		  On the Regualtory front, we submitted a pre-submission meeting request to FDA on February 1st. The goal of this meeting targeted for mid-April will be to finalize agreement on the formal statistical analysis plan for the pivotal trial and to get FDA agreement on the device benefits and risks</p>
+		<p> </p>
+      <br>
+      <h2 class="title reveal">Impact Advisory Board</h2>
       <p class="lede reveal">
-        An AUC of 0.50 is a coin flip. Reaching 0.628 indicates the algorithm has identified proprietary
-        biological signals for PTSD—while acknowledging that additional clinical trials are required as part
-        of the FDA pathway. 
+        One of the most grounding forces at Senseye continues to be our Impact Advisory Board (IAB).
       </p>
 
       <div class="grid">
         <div class="card col-6 reveal">
-          <h3>Insight Model Accuracy</h3>
-          <p class="muted">Highlight: AUC improved to <strong>0.628</strong> with merged metadata; MCC improved to <strong>0.250</strong>.</p>
-          <p class="muted">&nbsp;</p>
-<div class="imgFrame">
-          <img src="../Senseye-Validation-Chart.png" width="1041" height="427" alt="Computer Vision Accuracy Measurements"/>
+          <h3>IAB's&nbsp; Diverse Realities</h3>
+          <p class="muted">The IAB brings together clinicians working across diverse settings, including the VA, women’s health, and integrated care, alongside patient advisors who share their lived experience with PTSD and their diagnostic journeys. This group helps ensure that what we’re building remains deeply connected to the realities of both clinical practice and patient experience.</p>
+			          <div class="pillRow">
+	 		<span class="miniPill">VA</span>
+            <span class="miniPill">Women's Health</span>
+            <span class="miniPill">Integrated Care</span>
+            <span class="miniPill">Clinical Research</span>
+            <span class="miniPill">Private Practice</span>
           </div>
-
-          <details data-track="validation-expand">
-            <summary>Investor Context (read more)</summary>
-            <p>
-              This internal benchmark supports continued optimization and informs the Phase III kickoff. It does not
-              constitute a guarantee of regulatory clearance or future performance.<br>
-            </p>
-          </details>
         </div>
 
         <div class="card col-6 reveal">
-          <h3>Why This Matters</h3>
+          <h3>Guided Impactful Insights&nbsp;</h3>
           <p class="muted">
-            Accuracy improvements, paired with major processing efficiency gains, reduce operational friction and
-            support scalable trial execution—an important bridge between R&amp;D and commercialization.
+            Their insights guide everything from usability decisions to broader questions about clinical utility, and they play a critical role in keeping our team focused on the bigger picture: why this product matters and who it’s for. Our patient advisors have been able to give us genuine context for our product, their difficult journeys towards a diagnosis, and a deeper understanding of PTSD and themselves has been inspiring. They have shared with us how meaningful the Senseye Diagnostic will be for them and others who experience PTSD, who are often searching for some insight into the debilitating symptoms they are living with.
           </p>
 
-          <div class="grid" style="margin-top:14px">
-            <div class="card col-6" style="box-shadow:none;">
-              <div class="metricVal">0.628</div>
-              <div class="metricLabel">AUC (internal benchmark)</div>
-            </div>
-            <div class="card col-6" style="box-shadow:none;">
-              <div class="metricVal">3–5×</div>
-              <div class="metricLabel">Processing efficiency</div>
-				
-            </div>
-			</div>
-			
-          <details data-track="validation-expand">
-            <summary>AUC & MCC Defined (read more)</summary>
-            <p> <strong> AUC (Area Under the Curve) </strong>is a core metric for machine learning models that  summarizes how correctly a model is able to differentiate between classes of interest. It ranges from 0 to 1 with 0.5 being the same predictive power as random guessing and 1 being a perfect model. It is a scale free metric meaning it is independent of thresholds and class balance, unlike accuracy. This makes it a better measurement of the underlying strength of the signal.&nbsp;</p>
-            <p><strong>MCC (Matthews Correlation Coefficient) </strong>is a core metric for classification models that summarizes how well predicted labels agree with true labels across all four outcomes (TP, TN, FP, FN). It ranges from −1 to 1, where 0 corresponds to random prediction, 1 to perfect prediction, and −1 to perfectly wrong prediction. Because it incorporates all four confusion-matrix terms symmetrically, it naturally balances precision and recall (and their negatives), remains informative under class imbalance, and evaluates performance at a concrete decision threshold—making it a more faithful measure of decision quality than accuracy and more decision-relevant than threshold-free metrics like AUC.<br>
-            </p>
-          </details>
 
-        </div>
-		  
+		</div>
+			
+
       </div>
-		    <div class="container">
-      <h3>Clinical Performance Update: Comparative Benchmark Analysis</h3>
-      <p> AUC stands for Area Under the Curve and is a numerical representation of sensitivity versus specificity.</p>
-      <p>These improvements confirm that our model is on track for an AUC of >0.8 as we continue development through Phase III. To contextualize this score, the FDA target is 0.7, and 0.628 already represents an improvement against the current gold standard for diagnosis, the CAPS-5 along with other clinician measures administeq12red via long-form clinical interviews. While we have seen higher AUC scores/accuracy this is our most robust model and we suspect this will be our best- the one we submit to FDA. It has only been trained on a subset of our data, and will continue to improve.
-</p>
+		  
     </div>
+	  
+	      <div class="container"><br>
+      <h2 class="title reveal">Australia Rebate</h2>
+      <p class="lede reveal">
+      <strong> Our Advanced Overseas Finding has been granted! </strong>This came in record time —<em> about 2 months instead of the expected ~6 months. </em>What it means: the Australian tax authorities have agreed that all of our eligible clinical trial spend in both Australia and the U.S. can be included in our Australian R&amp;D tax rebate claim. Because we have meaningful clinical spend in the U.S., this expands the rebate base significantly. This was a deliberate long-term move we started ~2 years ago when we set up the Australian entity, and it’s great to see it pay off exactly as intended.</p>
+    </div>
+
+	  
+	  
+	  
+  <div class="container"><br><br>
+      <h2 class="title reveal">The Senseye Team</h2>
+      <p> Senseye is currently a <strong>team of 19</strong>, operating with focus and urgency as we approach Phase III.</p>
+      <p>We’re actively searching for: </p>
+<ul>
+      <li>A <strong>Chief Medical Officer</strong>&nbsp;</li>
+        <li>A <strong>Machine Learning Director</strong> to support and guide our ML team </li>
+      </ul>
+<p>While the team remains lean, we’re adding targeted leadership to ensure we<em> scale responsibly and effectively </em>during this next phase. </p>
+<img src="../month-one/image-four.png" width="85%" height="85%" alt=""/>            </div>
   </section>
 
-  <section id="updates" class="panelDark sectionPad">
+  <section id="goals" class="panelDark sectionPad">
     <div class="container">
-      <div class="kicker reveal">Updates</div>
-      <h2 class="title reveal">Platform Improvements &amp; Operational Momentum</h2>
-      <p>
-        Infrastructure upgrades, improved instructions, and stronger UX reduced data loss and user error, improving
-        study efficiency and readiness for higher-volume execution.
-      </p>
+      <div class="kicker reveal">Goals</div>
+      <h2 class="title reveal">Quarterly Goals</h2>
 
       <div class="grid">
         <div class="card col-7 reveal">
-          <h3>Data Quality &amp; Participant Experience</h3>
-          <p class="muted"> Data loss improved across cohorts and stabilized at an acceptable internal floor. Reported adverse events
-            decreased period-over-period, supporting operational quality as scale increases. <strong>&nbsp;</strong> </p>
-          <p class="muted">&nbsp;</p>
-<div class="imgFrame"><img src="../data-quality-by-cohort-chart-1.png" width="1028" height="674" alt="Data Quality by Cohort - Average % of Zeros (Lower is Better)"/>
-          </div>
-        </div>
+			<h2>TECHNICAL GOALS</h2>
+<div class="goalsDisplay">Computer Vision</div>
+
+<h3>Contrast-Banded Pupillometry Performance Framework (Low-Contrast Eyes)</h3>
+
+<p class="subIndent">
+  Improve our shared language around low-contrast eyes by building and labeling a framework
+  to easily identify different contrast bands. We will then use that framework to better
+  understand our capabilities and how different bands are represented within our dataset.
+</p>
+<p><strong>Key Result:</strong></p>
+<ul class="subIndent subIndent--bullets"><li><strong> Contrast metric implemented: </strong>a reproducible contrast score in the range [0, 1] computed from sampled frames, where 0 = no usable contrast between pupil/iris and 1 = ideal contrast, available for analysis and reporting by end of Q1 2026.</ul></li>
+          <details data-track="updates-expand">
+        <summary>Details on Pupil Contrast Banding</summary>   
+            <ul>
+              <li>Five initial contrast bands defined (adjustable): initial bands set as [0.0–0.2), [0.2–0.4), [0.4–0.6), [0.6–0.8), [0.8–1.0] with documentation and examples; includes explicit note that band thresholds may be refined by end of quarter by end of Q1 2026.
+<li>Per-band performance reporting live: pupillometry evaluation reports include performance by contrast band using the appropriate metrics (e.g., MCC, AUC, IoU as applicable) with baseline vs. current comparisons by end of Q1 2026.
+<li>Initial per-band performance targets set (adjustable): starting targets established for each band with the intent that higher-contrast bands score well above chance and lower-contrast bands have reduced expectations, and includes explicit statement targets may be refined by end of quarter:
+<li>Band 5 (0.8–1.0): high target (e.g., ~0.8 “strong” performance level, metric-appropriate)</li>
+<li>Band 4 (0.6–0.8): high target (near Band 5, metric-appropriate)</li>
+              <li>Band 3 (0.4–0.6): moderate target (lower than Bands 4–5</li>
+              <li>Band 2 (0.2–0.4): approximately “coin-flip”/chance-level target (metric-appropriate)</li>
+              <li>Band 1 (0.0–0.2): low expected target given RGB limitations</li>
+              <li>Targets are documented and tied to the chosen metric definitions by end of Q1 2026.</li>
+<li>Band distribution analysis completed: analysis of historical sessions completed to estimate the proportion of participants in each contrast band, with a documented plan/assumptions for extrapolating toward global population distribution by end of Q1 2026.</li>
+          avoiding duplicated systems and reducing operational overhead.</li></details> 
+		  <br>
+		  <div class="goalsDisplay">ML Operations</div>
+
+
+<h3>Productizable MLOps Foundations by End of Q1</h3>
+
+<p class="subIndent">
+  Improve ML reporting and increase the efficiency of internal ML tools and communications
+</p>
+		  <p><strong>Key Result:</strong></p>
+
+<ul class="subIndent subIndent--bullets">
+   <li><strong>Model + data versioning implemented </strong>(data snapshot strategy, model tagging, reproducible runs) by Mar 31, 2026</li>
+   <li><strong>Automated pipeline QA</strong> (data validation checks + golden test cases) in place by Mar 31, 2026</li>
+   <li><strong>Monitoring + ownership established </strong>(dashboards + runbooks + escalation path) by Mar 31, 2026</li>
+  </ul>
+</div>
 
         <div class="card col-5 reveal">
-          <h3>Security &amp; Multi-Tenant Platform</h3>
-          <p class="muted">
-            Enterprise-grade security improvements include strict identity-based access controls, least-privilege permissions,
-            and revocable API keys—aligned with regulated product requirements.
-          </p>
+          <h2>PRODUCT/GTM &amp; CLINICAL GOALS</h2>
+			<div class="goalsDisplay">Product/GTM Goal</div>
 
-          <details data-track="updates-expand">
-            <summary>What “Multi-Tenant” Enables</summary>
-            <p>
-              Multiple studies and partners can operate independently while integrating through shared platform primitives,
-              avoiding duplicated systems and reducing operational overhead.
-            </p>
-			  
-          </details>			 
-			        <h2> A Note from Senseye's Founder</h2>
-           <p> I recently had the pleasure of sitting down with one of our investors for an in-depth conversation on the <strong>Maverick Minds Podcast</strong>. I truly enjoyed the depth of the discussion and I wanted to share the episode with all of you.&nbsp;</p>
-          <p>Very Respectfully,&nbsp;</p>
-                    <p><strong>David Zakariaie </strong>|<strong>&nbsp;</strong>CEO/Founder | Senseye</p>
-<div class="kicker reveal">
-    <a href="https://www.youtube.com/watch?v=-Y57lxHAFyw&t=3043s" style="color: white;"><strong>Watch the Interview</strong></a>
-</div>        
+<h3>Advance Commercial Readiness by Establishing a Clear, Credible, and Executable Go-to-Market Foundation Across Reimbursement Strategy and Market Access</h3>
+
+<p class="subIndent">
+An umbrella goal that allows us to align all the other pieces of work needed to be prepared for day one of FDA approval including marketing, product roadmap (additional conditions), PR, future product design, etc.
+</p>
+<p><strong>Key Result:</strong></p>
+			<ul class="subIndent subIndent--bullets"><li><strong>Complete Q1 tasks </strong>on GTM roadmap</ul>
+	<br>
+						<div class="goalsDisplay">Product/GTM Goal</div>
+
+<h3>Define and Complete Foundational Productization Preparations</h3>
+
+<p class="subIndent">
+This objective focuses on de-risking Senseye’s commercial pathway by aligning reimbursement, pricing, clinical credibility, adoption workflows, and policy positioning. Successful completion of the Q1 go-to-market timeline will ensure the company is prepared to support payer, provider, and health system adoption following clinical validation, with clear ownership, strategic alignment, and external readiness across all critical GTM dimensions.
+</p>
+<P><strong>Key Result:</strong></P>
+<ul class="subIndent subIndent--bullets"><li><strong>Comprehensive, high-level timeline </strong>encompassing all work areas through FDA approval.
+</ul>
+			<br>
+			<div class="goalsDisplay">Clinical Goal</div>
+
+<h3>Hit DCT Recruitment Target 106 Participants</h3>
+
+<p class="subIndent">
+Our recruitment target for Q1 is 106 participants, agreed upon with our recruitment vendor. This will allow a low ramp up as we work through any issues and develop outreach.
+</p>
+<p><strong>Key Result:</strong></p>
+			<ul class="subIndent subIndent--bullets"><li><strong>Recruitment targets hit
+</strong>on GTM roadmap</ul>
+	<br>
+      </ul>
+					<div class="goalsDisplay">Clinical Goal</div>
+
+<h3>Successfully Run Participants Through DCT</h3>
+
+<p class="subIndent">
+  <strong> Successful launch </strong>of DCT and securely running participants </p>
+<p><strong>Key Result:</strong></p>
+			<ul class="subIndent subIndent--bullets"><li><strong>DCT Launch Feb 23, 2026 </strong>and participants run&nbsp;
+			</ul>
+      </ul>	  
 </div>
-      </div>
     </div>
   </section>
 
   <section id="employee" class="panelDark sectionPad">
     <div class="container">
       <div class="kicker reveal">Employee Highlight</div>
-      <h2 class="title reveal">David Durrant, SVP Development</h2>
+      <h2 class="title reveal">David Zakariaie — CEO</h2>
       <p class="lede reveal">
-        A spotlight on the leader driving platform reliability, production readiness, and engineering execution.
+        This feels a bit weird to have myself be the employee spotlight for the month, but over the last few months, as we have brought on more institutional investors that don’t know me personally, I was asked to focus this month on me, so I asked Allison to write it up.
       </p>
 
       <div class="grid">
         <div class="card col-6 reveal">
-          <div class="imgFrame" style="margin-bottom:14px;"> <img src="../David-SVP-Senseye-Employee.png" width="366" height="343" alt="David Durrant"/>
+          <div class="imgFrame" style="margin-bottom:10px;"> <img src="../month-one/image-five.png" width="479" height="640" alt=""/>
           </div>
         </div>
 
         <div class="card col-6 reveal">
-		<h3>Leadership & Execution</h3>
+		<h3>Leadership &amp; Extacurricular Activities</h3>
           <p class="muted"></p>
-          <p> David has transformed development at Senseye by architecting a multi-tenant platform that elevated the app from a research tool to a secure, production-quality deployment. By strengthening agile processes, he has enabled the engineering and machine learning teams to iterate faster, ensuring the data pipeline is ready for high-volume clinical use. </p>
-
-          <h3>Why it Matters for Phase III</h3>
-          <p class="muted"> This architecture is a critical strategic asset: it allows Senseye to scale rapidly without duplicating infrastructure. A stable, secure platform reduces operational risk during the Phase III kickoff by supporting rapid protocol refinement and providing the dependable performance required for pivotal regulatory data collection. </p>
-          </p>
-
-          <div class="pillRow">
-            <span class="miniPill">Multi-tenant architecture</span>
-            <span class="miniPill">Enterprise-grade security</span>
-            <span class="miniPill">Production-quality UX</span>
-          </div>
+          <p> As we enter Phase III, David’s leadership continues to be a steady force across the organization. From navigating strategy to supporting teams through rapid iteration, David has helped shape an environment where high standards and trust coexist, a combination that’s essential as we take on the complexity of a trial at this scale.&nbsp;</p>
+          <p>You might not be aware that David is also a licensed commercial pilot and flight instructor, and flies for the Civil Air Patrol, he’s flown essential supplies into disaster zones as well as search and rescue.&nbsp;</p>
+          <p>In case you are concerned he hasn’t achieved quite enough, he’s also begun running marathons in the last few years, completing multiple races across the country! Pictured here is David after the “Dopey Challenge,” where once a year at Disney World you run a 5k, 10k, half-marathon, and full marathon on consecutive days. </p>
+<div class="pillRow">
+      <span class="miniPill">Senseye CEO</span>
+      <span class="miniPill">Pilot &amp; Flight Instructor</span>
+      <span class="miniPill">Marathon Runner</span>
+      </div>
 		  
 		  
         </div>
@@ -1405,198 +1683,65 @@
       <div class="grid">      </div>
   </section>
 
-  <section id="clinical" class="panelLight sectionPad">
+  <section id="wrapup" class="panelLight sectionPad">
     <div class="container">
-      <div class="kicker reveal">Clinical</div>
-      <h2 class="title reveal">Phase III Kickoff &amp; Regulatory Path</h2>
+      <div class="kicker reveal">Month-end Wrap-Up</div>
+      <h2 class="title reveal">Key Takeaways</h2>
       <p class="lede reveal">
-        Phase III is scheduled to kick off on <strong>February 23, 2026</strong>, scaling rapidly to high monthly enrollment
-        and evolving into the pivotal study supporting FDA submission.
-      </p>
-
-      <div class="grid">
-        <div class="card col-12 reveal">
-          <h2 class="roadmapTitle">Strategic Roadmap: Bridging the Gap to Commercialization</h2>
-
-          <div class="tableWrap">
-            <div class="tableScroll" role="region" aria-label="Strategic roadmap table (scrollable)">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Strategy stage</th>
-                    <th>Clinical &amp; Operations</th>
-                    <th>Technical Product</th>
-                    <th>Commercial &amp; Go-to-Market</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><strong>Stage 1</strong><br/>De-risking &amp; Data Scale (Q1–Q2 2026)</td>
-                    <td>Feb 23rd, 2026: Phase III kickoff; ramp to high-volume enrollment</td>
-                    <td>Model “freeze” for regulatory-grade testing; maintain 5× efficiency</td>
-                    <td>Early funding signals; reimbursement pathway work (coding/pricing)</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Stage 2</strong><br/>Pivotal Validation &amp; Regulatory Prep (Q3–Q4 2026)</td>
-                    <td>Data collection reaches critical mass</td>
-                    <td>Machine learning model dev, Enterprise hardening aligned with regulated requirements</td>
-                    <td>Strategic partnerships for post-approval pilots</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Stage 3</strong><br/>Market Entry (2027 target)</td>
-                    <td>Pivotal transition; Ground-truth data set established FDA submission package finalized for review</td>
-                    <td>Clinical integration into initial partner environments</td>
-                    <td>Initial commercial revenue post-clearance</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="timelineStepper" id="timelineStepper" data-track="timeline-stepper">
-            <div class="timelineHead">
-              <h4 class="timelineTitle">Milestone Timeline</h4>
-              <p class="timelineNote"><strong>Key Milestones from Validation Alpha through Market Entry (post-clearance).</strong></p>
-            </div>
-
-            <div class="stepperWrap" role="region" aria-label="Milestone timeline (scrollable)">
-              <ol class="stepper" aria-label="Milestone steps">
-                <span class="stepperTail" aria-hidden="true"></span>
-
-                <li class="step done" data-step="validation-alpha">
-                  <span class="dot" aria-hidden="true"></span>
-                  <div class="stepCard">
-                    <div class="stepTop">
-                      <span class="stepTag">Complete</span>
-                      <span class="stepWhen">2025</span>
-                    </div>
-                    <div class="stepName">Validation Alpha</div>
-                    <div class="stepDesc">Internal benchmark reached (0.628 AUC).</div>
-                  </div>
-                </li>
-
-                <li class="step done" data-step="efficiency">
-                  <span class="dot" aria-hidden="true"></span>
-                  <div class="stepCard">
-                    <div class="stepTop">
-                      <span class="stepTag">Complete</span>
-                      <span class="stepWhen">2025</span>
-                    </div>
-                    <div class="stepName">3–5× Efficiency</div>
-                    <div class="stepDesc">Processing gains to reduce operational friction.</div>
-                  </div>
-                </li>
-
-                <li class="step current is-default" data-step="phase-iii-kickoff">
-                  <span class="hereWrap" aria-hidden="true">
-                    <span class="hereLabel">We are here</span>
-                    <span class="hereSub">Phase III Execution</span>
-                  </span>
-                  <div class="stepCard">
-                    <div class="stepTop">
-                      <span class="stepTag">Next</span>
-                      <span class="stepWhen">Feb 23, 2026</span>
-                    </div>
-                    <div class="stepName">Phase III Kickoff</div>
-                    <div class="stepDesc">Scale enrollment and execute pivotal study pathway.</div>
-                  </div>
-                </li>
-
-                <li class="step" data-step="pivotal-transition">
-                  <span class="dot" aria-hidden="true"></span>
-                  <div class="stepCard">
-                    <div class="stepTop">
-                      <span class="stepTag">Planned</span>
-                      <span class="stepWhen">2026</span>
-                    </div>
-                    <div class="stepName">Pivotal Transition</div>
-                    <div class="stepDesc">Ground-truth dataset reaches critical mass.</div>
-                  </div>
-                </li>
-
-                <li class="step" data-step="fda-submission">
-                  <span class="dot" aria-hidden="true"></span>
-                  <div class="stepCard">
-                    <div class="stepTop">
-                      <span class="stepTag">Planned</span>
-                      <span class="stepWhen">End of 2026</span>
-                    </div>
-                    <div class="stepName">FDA Submission</div>
-                    <div class="stepDesc">Submission package prepared for review.</div>
-                  </div>
-                </li>
-
-                <li class="step" data-step="market-entry">
-                  <span class="dot" aria-hidden="true"></span>
-                  <div class="stepCard">
-                    <div class="stepTop">
-                      <span class="stepTag">Planned</span>
-                      <span class="stepWhen">2027+</span>
-                    </div>
-                    <div class="stepName">Market Entry</div>
-                    <div class="stepDesc">Initial revenue post-clearance and adoption.</div>
-                  </div>
-                </li>
-              </ol>
-            </div>
-
-
-            </details>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="opportunity" class="panelLight sectionPad">
-    <div class="container">
-      <div class="kicker reveal">Opportunity</div>
-      <h2 class="title reveal">For Investors</h2>
-      <p class="lede reveal">
-        <strong>Senseye has reached a pivotal inflection point. </strong>With a validated 0.628 AUC and meaningful processing efficiency gains,
-      we have bridged key technical milestones ahead of the Phase III kickoff. </p>
-      <p class="lede reveal">
-        <strong>The Key Takeaway: </strong>We are no longer validating our hardware against the science, we can detect PTSD; we are now optimizing how accurately the models do so. The 0.628 AUC is the benchmark that proves <strong>our path is</strong> <strong><em>supported by data</em></strong>, not just clinical theory.
-      </p>
+        
+Senseye is entering Phase III with stronger data capture, a more mature modeling foundation, and a platform built to operate at clinical scale.
+Very few pre-FDA companies reach this stage, and fewer still do so while generating revenue. This moment represents a true inflection point for the company.
+</p>
+	<div>
+      <h2>Conclusion</h2>
+      <h4> We want to close by sharing two reflections from our Impact Advisory Board that capture why this work matters.</h4>
 
       <div class="grid">
         <div class="card col-7 reveal">
-          <h3>Strategic Participation (Compliance-Forward)</h3>
-          <p class="muted">
-            This page is for informational purposes only and is not an offer to sell securities. Any offering, if made, will be
-            made only through confidential offering materials and only to Accredited Investors.
-          </p>
-          <p class="muted">
-              Metrics referenced are based on internal studies and are not a guarantee of FDA approval or future performance.
-              Clinical trials involve inherent risks and outcomes are not guaranteed.
-            </p>
+          <h3>Patient advisor Bess Hilpert, <em>author of Finding I</em>, shared:
+          </h3>          
+			<blockquote><h2></h2>
+				“Knowing a clinician will get a real diagnosis and a severity level, and then help me create a plan — I’m all in. I want you to get this out. I want people to have access to this tool. I’m so grateful for what you all are doing. It’s fantastic.” 
+			</blockquote>
+			
+          <p class="muted"><img src="../month-one/image-six.png" alt="" width="40%" height="40%"/></p>
+<p class="muted">
+  <strong><em> Bess has been instrumental in helping us understand what truly matters to patients and how we can improve their experience with the Diagnostic. </em></strong></p>
         </div>
 
         <div class="card col-5 reveal">
           <div class="riskBox">
-            <h3>Strategic Risk Disclosures</h3>
-            <ul>
-              <li>Clinical &amp; regulatory outcomes are uncertain; clearance is not guaranteed.</li>
-              <li>Scaling to high-volume Phase III execution presents operational risks.</li>
-              <li>Additional funding rounds may be required to reach commercialization.</li>
-              <li>Market adoption depends on reimbursement and health system integration.</li>
-            </ul>
-            <p style="margin:10px 0 0;">
-              <strong>Safe Harbor:</strong> This communication contains forward-looking statements subject to risks and uncertainties.
-              Actual results may differ materially. Senseye assumes no obligation to update forward-looking statements.
-            </p>
-          </div>
-        </div>
-		  
-      </div>
+            <h3>An Expert Perspective on Trauma-Informed Care</h3>
 
+            <h4> Dr. Suzanne Pineles, who works at Boston University School of Medicine and as a Clinical Research Psychologist at the National Center for PTSD, shared:
+		  	</h4>
+			  	<blockquote>
+
+            <h2 style="margin:10px 0 0;">“It is really hard for people to find trauma-informed care; you guys are capturing data that helps dictate how to best serve people, and that’s amazing.”</h2>
+				</blockquote>
+ 			           <h3 style="margin:10px 0 0;"><strong>These words continue to carry us through the hard work ahead. Phase III is just weeks away, and we’re ready.&nbsp;</strong></h3>
+
+          </div>
+
+        </div>
+
+</div>
+		
+  <section id="opportunity" class="sectionPad">
+    <div class="container">
+      <div class="kicker reveal">Get Involved</div>
+<h2>Help Us Shape the Future</h2>
+<p class="lede reveal">
+        
+If you’re interested in joining our current Phase II machine learning study or learning more, please visit our landing page. As always, if there’s anything you’d like to see in future newsletters or feedback you’d like to share, feel free to email me directly at <a href="mailto:allison.fabian@senseye.co">Allison.Fabian@senseye.co</a>.<strong><em> I’m looking forward to continuing to build these updates in partnership with all of you throughout the year. </em></strong> </p><br>
+	<div>
       <div class="footerNote">
 		  
 		  
 		            <p class="muted">
 						<a href="https://senseye.co"> © Senseye</a> — Investor Communication (Information-only; not an offer to sell securities)</p>
       </div>
-    </div>
+</div>
   </section>
 
   <a class="toTop" id="toTop" href="#senseye" aria-label="Back to top">↑ Top</a>
