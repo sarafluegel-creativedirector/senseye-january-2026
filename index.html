@@ -1552,9 +1552,7 @@
 
       <div class="grid">
         <div class="card col-7 reveal">
-			<h2>TECHNICAL GOALS</h2>
-<div class="goalsDisplay">Computer Vision</div>
-
+		<h2>TECHNICAL GOALS</h2>
 <h3>Contrast-Banded Pupillometry Performance Framework (Low-Contrast Eyes)</h3>
 
 <p class="subIndent">
@@ -1566,72 +1564,20 @@
 <ul class="subIndent subIndent--bullets"><li><strong> Contrast metric implemented: </strong>a reproducible contrast score in the range [0, 1] computed from sampled frames, where 0 = no usable contrast between pupil/iris and 1 = ideal contrast, available for analysis and reporting by end of Q1 2026.</ul></li>
           <details data-track="updates-expand">
         <summary>Details on Pupil Contrast Banding</summary>   
-            <ul>
-              <li>Five initial contrast bands defined (adjustable): initial bands set as [0.0–0.2), [0.2–0.4), [0.4–0.6), [0.6–0.8), [0.8–1.0] with documentation and examples; includes explicit note that band thresholds may be refined by end of quarter by end of Q1 2026.
-<li>Per-band performance reporting live: pupillometry evaluation reports include performance by contrast band using the appropriate metrics (e.g., MCC, AUC, IoU as applicable) with baseline vs. current comparisons by end of Q1 2026.
-<li>Initial per-band performance targets set (adjustable): starting targets established for each band with the intent that higher-contrast bands score well above chance and lower-contrast bands have reduced expectations, and includes explicit statement targets may be refined by end of quarter:
-<li>Band 5 (0.8–1.0): high target (e.g., ~0.8 “strong” performance level, metric-appropriate)</li>
-<li>Band 4 (0.6–0.8): high target (near Band 5, metric-appropriate)</li>
-              <li>Band 3 (0.4–0.6): moderate target (lower than Bands 4–5</li>
-              <li>Band 2 (0.2–0.4): approximately “coin-flip”/chance-level target (metric-appropriate)</li>
-              <li>Band 1 (0.0–0.2): low expected target given RGB limitations</li>
-              <li>Targets are documented and tied to the chosen metric definitions by end of Q1 2026.</li>
-<li>Band distribution analysis completed: analysis of historical sessions completed to estimate the proportion of participants in each contrast band, with a documented plan/assumptions for extrapolating toward global population distribution by end of Q1 2026.</li>
-          avoiding duplicated systems and reducing operational overhead.</li></details> 
-		  <br>
-		  <div class="goalsDisplay">ML Operations</div>
+        <ul>
+              <li><strong>Five initial contrast bands defined (adjustable): </strong>initial bands set as [0.0–0.2), [0.2–0.4), [0.4–0.6), [0.6–0.8), [0.8–1.0] with documentation and examples; includes explicit note that band thresholds may be refined by end of quarter by end of Q1 2026.
+          <li><strong>Per-band performance reporting live:</strong> pupillometry evaluation reports include performance by contrast band using the appropriate metrics (e.g., MCC, AUC, IoU as applicable) with baseline vs. current comparisons by end of Q1 2026.
+          <li><strong>Initial per-band performance targets set (adjustable):</strong> starting targets established for each band with the intent that higher-contrast bands score well above chance and lower-contrast bands have reduced expectations, and includes explicit statement targets may be refined by end of quarter:
+          <li><strong>Band 5 (0.8–1.0): </strong>high target (e.g., ~0.8 “strong” performance level, metric-appropriate)</li>
+<li><strong>Band 4 (0.6–0.8):</strong> high target (near Band 5, metric-appropriate)</li>
+              <li><strong>Band 3 (0.4–0.6): </strong>moderate target (lower than Bands 4–5</li>
+              <li><strong>Band 2 (0.2–0.4): </strong>approximately “coin-flip”/chance-level target (metric-appropriate)</li>
+              <li><strong>Band 1 (0.0–0.2):</strong> low expected target given RGB limitations</li>
+              <li><strong>Targets are documented and tied</strong> to the chosen metric definitions by end of Q1 2026.</li>
+          <li><strong>Band distribution analysis completed: </strong>analysis of historical sessions completed to estimate the proportion of participants in each contrast band, with a documented plan/assumptions for extrapolating toward global population distribution by end of Q1 2026.</li>
 
-
-<h3>Productizable MLOps Foundations by End of Q1</h3>
-
-<p class="subIndent">
-  Improve ML reporting and increase the efficiency of internal ML tools and communications
-</p>
-		  <p><strong>Key Result:</strong></p>
-
-<ul class="subIndent subIndent--bullets">
-   <li><strong>Model + data versioning implemented </strong>(data snapshot strategy, model tagging, reproducible runs) by Mar 31, 2026</li>
-   <li><strong>Automated pipeline QA</strong> (data validation checks + golden test cases) in place by Mar 31, 2026</li>
-   <li><strong>Monitoring + ownership established </strong>(dashboards + runbooks + escalation path) by Mar 31, 2026</li>
-  </ul>
-</div>
-
-        <div class="card col-5 reveal">
-          <h2>PRODUCT/GTM &amp; CLINICAL GOALS</h2>
-			<div class="goalsDisplay">Product/GTM Goal</div>
-
-<h3>Advance Commercial Readiness by Establishing a Clear, Credible, and Executable Go-to-Market Foundation Across Reimbursement Strategy and Market Access</h3>
-
-<p class="subIndent">
-An umbrella goal that allows us to align all the other pieces of work needed to be prepared for day one of FDA approval including marketing, product roadmap (additional conditions), PR, future product design, etc.
-</p>
-<p><strong>Key Result:</strong></p>
-			<ul class="subIndent subIndent--bullets"><li><strong>Complete Q1 tasks </strong>on GTM roadmap</ul>
-	<br>
-						<div class="goalsDisplay">Product/GTM Goal</div>
-
-<h3>Define and Complete Foundational Productization Preparations</h3>
-
-<p class="subIndent">
-This objective focuses on de-risking Senseye’s commercial pathway by aligning reimbursement, pricing, clinical credibility, adoption workflows, and policy positioning. Successful completion of the Q1 go-to-market timeline will ensure the company is prepared to support payer, provider, and health system adoption following clinical validation, with clear ownership, strategic alignment, and external readiness across all critical GTM dimensions.
-</p>
-<P><strong>Key Result:</strong></P>
-<ul class="subIndent subIndent--bullets"><li><strong>Comprehensive, high-level timeline </strong>encompassing all work areas through FDA approval.
-</ul>
-			<br>
-			<div class="goalsDisplay">Clinical Goal</div>
-
-<h3>Hit DCT Recruitment Target 106 Participants</h3>
-
-<p class="subIndent">
-Our recruitment target for Q1 is 106 participants, agreed upon with our recruitment vendor. This will allow a low ramp up as we work through any issues and develop outreach.
-</p>
-<p><strong>Key Result:</strong></p>
-			<ul class="subIndent subIndent--bullets"><li><strong>Recruitment targets hit
-</strong>on GTM roadmap</ul>
-	<br>
       </ul>
-					<div class="goalsDisplay">Clinical Goal</div>
+					<div class="goalsDisplay">Clinical</div>
 
 <h3>Successfully Run Participants Through DCT</h3>
 
